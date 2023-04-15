@@ -32,16 +32,19 @@ export class AppComponent {
 
   buildForm(address?: Address) {
     this.addressFrom = this.formBuilder.group({
-      cep: [address ? address.cep : '', Validators.required],
+      cep: [
+        address ? address.cep : '',
+        Validators.compose([Validators.required, Validators.maxLength(9)]),
+      ],
       logradouro: [address ? address.logradouro : ''],
       bairro: [address ? address.bairro : ''],
       localidade: [address ? address.localidade : ''],
       uf: [address ? address.uf : ''],
       complemento: [address ? address.complemento : ''],
-      ibge: [address ? address.ibge : ''],
+      ibge: [{ value: address ? address.ibge : '', disabled: true }],
       gia: [address ? address.gia : ''],
       ddd: [address ? address.ddd : ''],
-      siafi: [address ? address.siafi : ''],
+      siafi: [{ value: address ? address.siafi : '', disabled: true }],
     });
   }
 }

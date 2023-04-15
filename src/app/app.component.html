@@ -3,7 +3,12 @@
     <div>
       <mat-form-field class="cep-container" appearance="outline">
         <mat-label>CEP</mat-label>
-        <input matInput formControlName="cep">
+        <input
+          matInput
+          formControlName="cep"
+          [value]="addressFrom.get('cep')?.value | cep"
+          maxlength="9"
+        >
       </mat-form-field>
     </div>
 
@@ -33,7 +38,11 @@
 
         <mat-form-field class="w-50" appearance="outline">
           <mat-label>Complemento</mat-label>
-          <input matInput formControlName="complemento">
+          <input
+            matInput
+            formControlName="complemento"
+            [value]="addressFrom.get('complemento')?.value | complemento"
+          >
         </mat-form-field>
       </section>
     </div>

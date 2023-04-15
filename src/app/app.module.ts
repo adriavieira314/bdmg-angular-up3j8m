@@ -11,6 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { CepPipe } from './pipes/cep.pipe';
+import { ComplementoPipe } from './pipes/complemento.pipe';
 
 @NgModule({
   imports: [
@@ -23,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  declarations: [AppComponent, HelloComponent],
+  declarations: [AppComponent, HelloComponent, CepPipe, ComplementoPipe],
   bootstrap: [AppComponent],
   providers: [AppService],
 })
