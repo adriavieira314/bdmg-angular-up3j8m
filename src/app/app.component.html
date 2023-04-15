@@ -1,3 +1,5 @@
+<hello></hello>
+
 <main>
   <form [formGroup]="addressFrom">
     <div>
@@ -69,4 +71,8 @@
       </mat-form-field>
     </div>
   </form>
+  
+  <footer>
+    <button mat-raised-button color="primary" (click)="saveOnStorage()">Salvar</button>
+  </footer>
 </main>

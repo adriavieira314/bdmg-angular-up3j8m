@@ -47,4 +47,9 @@ export class AppComponent {
       siafi: [{ value: address ? address.siafi : '', disabled: true }],
     });
   }
+
+  saveOnStorage() {
+    const address = this.addressFrom.getRawValue() as Address;
+    localStorage.setItem('addressObject', JSON.stringify(address));
+  }
 }

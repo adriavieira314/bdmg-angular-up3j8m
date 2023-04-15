@@ -4,7 +4,7 @@ p {
 
 main {
   width: 60%;
-  height: 60vh;
+  /* height: 60vh; */
   margin: 0 auto;
   border: 1px solid grey;
   padding: 20px;
@@ -13,6 +13,11 @@ main {
 
 form {
   width: 100%;
+}
+
+footer {
+  display: flex;
+  justify-content: end;
 }
 
 .inputs-container {
@@ -84,7 +89,7 @@ form {
   .inputs-container:nth-of-type(4) {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-column-gap: 3spx;
+    grid-column-gap: 3px;
     grid-row-gap: 0;
   }
 }
