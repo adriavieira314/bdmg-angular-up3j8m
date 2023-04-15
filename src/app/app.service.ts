@@ -5,11 +5,11 @@ import { Address } from './models/address.interface';
 
 @Injectable()
 export class AppService {
-  private readonly API = 'https://viacep.com.br/ws/30160907/json/';
+  private readonly API = 'https://viacep.com.br/ws/';
 
   constructor(private http: HttpClient) {}
 
-  getAddressInfo(): Observable<Address> {
-    return this.http.get<Address>(this.API);
+  getAddressInfo(valor: string = '30160907'): Observable<Address> {
+    return this.http.get<Address>(`${this.API}` + valor + `/json/`);
   }
 }
